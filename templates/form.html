@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Žinutės</title>
+<link rel="stylesheet" media="screen" type="text/css"
+	href="css/screen.css" />
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/submit.js"></script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<h1>Jūsų žinutės</h1>
+		<form method="post" action="?action=save">
+			<p  class="[error_class_fullname]">
+				<label for="fullname">Vardas, pavardė *</label><br /> <input
+					id="fullname" type="text" class="user_input" name="fullname" value="[fullname]" />
+			</p>
+			<p class="[error_class_birthdate]">
+				<label for="birthdate">Gimimo data *</label><br /> <input
+					id="birthdate" type="text" class="user_input" name="birthdate" value="[birthdate]" />
+			</p>
+			<p class="[error_class_email]">
+				<label for="email">El.pašto adresas</label><br /> <input id="email"
+					type="text" name="email" class="user_input" value="[email]" />
+			</p>
+			<p class="[error_class_message]">
+				<label for="message">Jūsų žinutė *</label><br />
+				<textarea id="message" class="user_input" name="message">[message]</textarea>
+			</p>
+			<p>
+				<span>* - privalomi laukai</span> <input id="msg_form_submit_btn" type="submit"
+					value="Skelbti" /> <img class="ajax-loader" src="img/ajax-loader.gif" alt="" />
+			</p>
+		</form>
+		<div id="messagesLayer">[list]</div>
+	</div>
+</body>
+</html>
